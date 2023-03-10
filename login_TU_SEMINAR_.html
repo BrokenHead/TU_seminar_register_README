@@ -114,34 +114,6 @@
     <div class="container p-5" style="margin-top:5%">
         <h2 class="text-center mb-5 text-uppercase text-muted" style="background-color: rgba(241, 241, 241, 0.7);border-radius:15px;">Thammasat
             University seminar and training</h2>
-        <% if(messages.success) {%>
-        <div id="show_result" class="alert alert-success">
-            <h3 class="alert-head">ลงทะเบียนเรียบร้อย</h3>
-            <hr>
-            <p>โปรดตรวจสอบที่ Email :
-                <%= messages.success %>
-            </p>
-        </div>
-        <% } %>
-        <% if(locals.login_errors) {
-            login_errors.forEach(function(error_msg) { %>
-        <div id="show_error" class="alert alert-warning">
-
-            <h4 class="alert-head">ไม่สามารถ Login</h4>
-            <hr>
-            <p>
-                <% if(error_msg == "Cannot read properties of undefined (reading 'length')") {%>
-                โปรดตรวจสอบ Email
-                <% } else if(error_msg == "Cannot read properties of undefined (reading 'ORG_ORGANIZATION')") {%>
-                หมดเวลา login
-                <% } else {%>
-                <%= error_msg %>
-                <% } %>
-                <p>
-
-        </div>
-        <% })
-        } %>
         <div class="border py-3" style="background-color: rgba(241, 241, 241, 0.7);border-radius:25px;">
             <h2 class="text-center">Login</h2>
 
