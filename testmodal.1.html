@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        th, td{
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 10px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 1s;
+            animation-name: animatetop;
+            animation-duration: 1s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+    </style>
+
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 1px solid #e7e7e7;
+          background-color: #f3f3f3;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: #666;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #ddd;
+        }
+        
+        li a.active {
+          color: white;
+          background-color: #04AA6D;
+        }
+
+        li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+        
+        </style>
+
+</head>
+<!-- https://docxtemplater.com/docs/ -->
+
+<body>
+    <!-- <form action="/uploadProfilePicture" 
+        enctype="multipart/form-data" method="POST">
+        
+          <span>Upload Profile Picture:</span>  
+          <input type="file" name="mypic" required/> <br>
+          <input type="submit" value="submit"> 
+      </form> -->
+
+    <div class="col-sm-12" style="margin-top:1rem">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">                
+                    <h3>คำร้องข้อสิทธิ์ Admin</h3>
+                <ul style="font-size:80%;">
+                    <li><a href="testmodal.2.html">
+                            <== ออกจากระบบจัดการ Admin</a> </li> <li><a href="">คำร้องข้อสิทธิ์ Admin</a></li>
+                    <li><a href="testmodal.2.html">รายละเอียด Admin</a></li>                    
+                    <li style="float:right"><a href="">วิธีใช้งาน</a></li>
+                    <li style="float:right;border-right: 1px solid #bbb"><a href="Screenshot_5.jpg">เพิ่มบันทึกคำร้อง</a></li>
+                </ul>
+            </div>
+
+            <div class="panel-heading">
+                <ul style="font-size:80%;">
+                    <li><a href="">fillter ยกมา</a></li>
+                   
+
+                </ul>
+            </div>
+        </div>
+
+        <div style="overflow-x:auto;">
+            <table class="table table-sm table-bordered" style="font-size:80%;">
+                <thead>
+                    <tr style="background-color: #D6EEEE">
+
+                        <th rowspan="2" style="Vertical-align:middle">#</th>
+                        <th rowspan="2" style="Vertical-align:middle">สถานะ</th>
+                        <th rowspan="2" style="Vertical-align:middle">หน่วยงาน</th>
+                        <th rowspan="2" style="Vertical-align:middle">ผู้ยื่น</th>
+                        <th rowspan="2" style="Vertical-align:middle">วันที่ยื่น</th>
+                        <th rowspan="2" style="Vertical-align:middle">เบอร์ติดต่อกลับ</th>
+                        <th colspan="2" style="Vertical-align:middle">จำนวน(ประเภท)</th>
+                        <th rowspan="2" style="Vertical-align:middle">ไฟล์แนบ</th>
+                        <th rowspan="2" style="Vertical-align:middle">จัดการ</th>
+                    </tr>
+                    <tr style="background-color: #D6EEEE">
+                        <th>A</th>
+                        <th>B</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td> 1</td>
+                        <td> รออนุมัติ</td>
+                        <td>กองทรัพยากรมนุษย์</td>
+                        <td>วริษฐ์ ศิริอำพันธ์กุล</td>
+                        <td>27 ม.ค. 2023</td>
+                        <td>(82) 1898</td>
+                        <td>2 คน</td>
+                        <td>1 คน</td>
+                        <td><a href="">ลิ้งก์ PDF</a></td>
+                        <td><button>ลบคำร้อง </button></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="999">
+                            <button class="btn btn-outline-primary btn-sm" id="collapse_btn" type="button" data-toggle="collapse"
+                                data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1">ดูผู้สมัคร</button>
+                            <!-- class="collapse multi-collapse" id="multiCollapseExample1" -->
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <input style="float: right;margin: 3px" class="col-xs-1" type="text" placeholder="ค้นหา">
+                                <button style="float: right;margin: 3px" class="btn btn-outline-success btn-sm">อนุมัติที่เลือก</button>
+                                <button style="float: right;margin: 3px" class="btn btn-outline-warning btn-sm">แก้ไขข้อมูลคำร้อง</button>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th>#</th>
+                                            <th>ชื่อ นามสกุล</th>
+                                            <th>หน่วยงาน</th>
+                                            <th>Email</th>
+                                            <th>ตำแหน่งงาน</th>
+                                            <th>ประเภท</th>
+                                            <th><input type="checkbox" /> เลือกทั้งหมด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> 1</td>
+                                            <td>วริษฐ์ 1</td>
+                                            <td>กองทรัพย์</td>
+                                            <td>v@tu.ac.th</td>
+                                            <td>นักคอม</td>
+                                            <td>A</td>
+                                            <td><input type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>นัดถา 2</td>
+                                            <td>กองทรัพย์</td>
+                                            <td>n@tu.ac.th</td>
+                                            <td>นักทรัพย์</td>
+                                            <td>A</td>
+                                            <td><input type="checkbox" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td> 3</td>
+                                            <td>จัน 3</td>
+                                            <td>กองคลัง</td>
+                                            <td>j@tu.ac.th</td>
+                                            <td>นักทรัพย์</td>
+                                            <td>B</td>
+                                            <td><input type="checkbox" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- <tr>
+
+                        <td><input type="checkbox" /> </td>
+                        <td> 1</td>
+                        <td>จาก admin หน่วยงาน การอบรมภายใน</td>
+                        <td>การใช้งาน photoshot รุ่นที่ 2566</td>
+                        <td>ICT</td>
+                        <td>ไทย</td>
+                        <td>14/12/2565</td>
+                        <td>15/12/2565</td>
+                        <td>4 ชั่วโมง</td>
+                        <td><button style="margin: 1px" class="btn btn-default btn-sm" id="myBtn">แก้ไขการอบรม</button><button
+                                style="margin: 1px" class="btn btn-default btn-sm" id="myBtn">ลบการอบรม</button></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="999">
+                            <button class="btn btn-outline-primary btn-sm" id="collapse_btn" type="button" data-toggle="collapse"
+                                data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1">ดูผู้เข้าร่วม</button>
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <input style="float: right;margin: 3px" class="col-xs-1" type="text" placeholder="ค้นหา">
+                                <button style="float: right;margin: 3px" class="btn btn-outline-danger btn-sm ">ลบผู้อบรมที่เลือก</button>
+                                <button style="float: right;margin: 3px" class="btn btn-outline-warning btn-sm">แก้ไขผู้เข้าร่วม</button>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>#</th>
+                                            <th>ชื่อ นามสกุล</th>
+                                            <th>หน่วยงาน</th>
+                                            <th>จำนวนอบรม(ชั่วโมง)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td> 1</td>
+                                            <td>วริษฐ์ 1</td>
+                                            <td>กองทรัพย์</td>
+                                            <td>4 ชั่วโมง</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>2</td>
+                                            <td>นัดถา 2</td>
+                                            <td>กองทรัพย์</td>
+                                            <td>4 ชั่วโมง</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td> 3</td>
+                                            <td>จัน 3</td>
+                                            <td>กองคลัง</td>
+                                            <td>4 ชั่วโมง</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td> 
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <button>Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>ประเภท</p>
+                <p>ชื่อหลักสูตร</p>
+                <p>หน่อยงานที่จัด</p>
+                <p>ประเทศ</p>
+                <p>วันเริ่ม</p>
+                <p>วันที่สิ้นสุดอบรม</p>
+                <p>หมายเหตุ</p>
+                <p>จำนวนอบรม </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalIn">
+        Sing in
+    </button> -->
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModalIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sing in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalOut">
+        Sign out
+    </button> -->
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModalOut" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Sign out</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <script>
+
+
+        $('.collapse').on('show.bs.collapse hide.bs.collapse', function () {
+            $('#collapse_btn').prop('disabled', true);
+        }).on('shown.bs.collapse hidden.bs.collapse', function () {
+            $('#collapse_btn').prop('disabled', false);
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</html>
