@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--made by Varist Siriumpunkul Varist.siri@gmail.com  -->
+<html lang="en">
+
+<head>
+    <style>
+
+        /* The popup form - hidden by default */
+                .form-popup {
+                  display: none;
+                  position: fixed;
+                  bottom: 5px;
+                  right: 15px;
+                  border: 2px solid gray;
+                  border-radius: 10px;
+                  z-index: 9;
+                  max-width: 300px;
+                  padding: 10px;
+                  background-color:  #f1f1f1;
+                }
+                
+
+                /* Full-width input fields */
+                .form-container input{
+                  max-width: 100%;
+                  padding: 1px;
+                  margin: 0 0 0 0;
+                  background: #f1f1f1f5;
+                  border: 1px solid black;
+                }
+                
+                /* When the inputs get focus, do something */
+                .form-container input:focus{
+                  background-color: #ddd;
+                  outline:none;
+                }
+                
+
+                /* Add some hover effects to buttons */
+                .form-container .btn:hover, .open-button:hover {
+                  opacity: 0.8;
+                }
+                </style>
+    <style>
+        /* tool_tip container - can be anything you want */
+    #show_result, #show_error{
+        /* animetion ปุ่มลบ */
+        position: absolute;
+        max-width: 50%;
+        top: 22%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        -webkit-animation: fadeout 700ms linear forwards;
+        animation: fadeout 700ms linear forwards;
+        animation-delay: 5s
+    }
+
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+            top: 22%;
+        }
+
+        70% {
+            opacity: 0;
+            top: 20%;
+        }
+
+        100% {
+            opacity: 0;
+            top: -100%;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        0% {
+            opacity: 1;
+            top: 22%;
+        }
+
+        70% {
+            opacity: 0;
+            top: 20%;
+        }
+
+        100% {
+            opacity: 0;
+            top: -100%;
+        }
+    }</style>
+
+    <style>
+        body,head {
+        background-image: url(https://tu.ac.th/uploads/news-tu/banner/banner64/vr3361.jpeg);
+        background-repeat: no-repeat;
+        background-position: auto;
+        background-size: 111%;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/gif" href="hr_logo.gif" />
+</head>
+
+<body>
+    <p style="position: absolute;top: 0%;right: 1%;font-size: 6px;color:rgb(151, 67, 69) ">http://localhost:3000/power_ad</p>
+    <div class="container p-5" style="margin-top:5%">
+        <h2 class="text-center mb-5 text-uppercase text-muted" style="background-color: rgba(241, 241, 241, 0.7);border-radius:15px;">Thammasat
+            University seminar and training</h2>
+        <% if(messages.success) {%>
+        <div id="show_result" class="alert alert-success">
+            <h3 class="alert-head">ลงทะเบียนเรียบร้อย</h3>
+            <hr>
+            <p>โปรดตรวจสอบที่ Email :
+                <%= messages.success %>
+            </p>
+        </div>
+        <% } %>
+        <% if(locals.login_errors) {
+            login_errors.forEach(function(error_msg) { %>
+        <div id="show_error" class="alert alert-warning">
+
+            <h4 class="alert-head">ไม่สามารถ Login</h4>
+            <hr>
+            <p>
+                <% if(error_msg == "Cannot read properties of undefined (reading 'length')") {%>
+                โปรดตรวจสอบ Email
+                <% } else if(error_msg == "Cannot read properties of undefined (reading 'ORG_ORGANIZATION')") {%>
+                หมดเวลา login
+                <% } else {%>
+                <%= error_msg %>
+                <% } %>
+                <p>
+
+        </div>
+        <% })
+        } %>
+        <div class="border py-3" style="background-color: rgba(241, 241, 241, 0.7);border-radius:25px;">
+            <h2 class="text-center">Login</h2>
+
+            <form action="" method="post">
+                <div class="form-group mt-1 text-center">
+                    <label for="_email">Email</label><br>
+                    <input size="15" type="text" name="user_email" id="_email" class="from-control" placeholder="Email ไม่มี @tu.ac.th"
+                        required><label for="_email" style="padding:3px;background-color: #aeaeaed4;border-radius:0px 5px 5px 0px;">&nbsp;@tu.ac.th</label>
+                </div>
+                <div class="form-group mt-1 text-center">
+                    <label for="_pass">Password</label><br>
+                    <input size="25" type="password" name="user_pass" id="_pass" class="from-control" placeholder="เลขบัตรประชาชน"
+                        required>
+                </div>
+                <div class="form-group mt-1 text-center">
+                    <input type="checkbox" id="checkboxaccept" name="checkboxaccep" value="1" required>
+                    <label for="checkboxaccep" style="text-align: center;">ข้าพเจ้ายินยอมให้ใช้งานข้อมูลพนักงาน</label><br></div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary mt-2">Login</button>
+
+                </div>
+            </form>
+            <div class="col-md-12 text-right">
+                <button type="none" onclick="openForm()" class="btn btn-light mt-2 text-right">ฉันคือ Admin HR เร็วๆ
+                    นี้</button>
+            </div>
+            <div class="form-popup" id="myForm">
+                <form action="/register_admin" method="post" class="form-container">
+                    <h2>Admin Register <a class="btn" href="/power_ad" style="padding: 7px 7px;cursor: default;background-color: transparent;"></a>
+                        </h3>
+                        <!-- <div class="form-group mt-2">
+                        <label for="regis_email">Email :</label>
+                        <input size="15" type="text" name="regis_email" id="regis_email" class="from-control form-control-sm"
+                            placeholder="Email ไม่มี @tu.ac.th" required><label for="regis_email">&nbsp;@tu.ac.th</label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="name">ชื่อ :</label>
+                        <input size="25" type="text" name="name" id="name" class="from-control" placeholder="ชื่อ"
+                            required>
+                    </div>
+                    <div class="form-group mt-2 ">
+                        <label for="family-name">นามสกุล :</label>
+                        <input size="20" type="text" name="family-name" id="family-name" class="from-control"
+                            placeholder="นามสกุล" required>
+                    </div> -->
+                        <div class="form-group mt-2 ">
+                            <label for="tal">เบอร์ติดต่อ :</label>
+                            <input size="18" type="text" name="tal" id="tal" class="from-control" placeholder="เบอร์ภายใน/มือถือ"
+                                required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="myfile" style="margin-top:10px">กรอก <a class="btn btn-info btn-sm" href="https://www.w3schools.com/"
+                                    target="_blank">แบบฟอร์ม</a> และส่ง PDF โดย : </label>
+
+
+                            <div style="border: 2px solid gray;padding: 3px;border-radius:5px;">
+                                <label for="myfile">ลิ้งก์ไฟล์ PDF <input size="16" type="link" name="pdf_link" id="pdf_link"
+                                        class="from-control" placeholder=" ลิ้งค์ไฟล์ google drive" required></label>
+                            </div>
+                            หรือ
+                            <div style="border: 2px solid gray;padding: 3px;border-radius:5px;">
+                                <label for="myfile">เลือกไฟล์ PDF :</label>
+                                <input type="file" id="myfile" name="myfile" accept=".pdf" required>
+                            </div>
+                        </div>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                        <label for="vehicle1">ข้าพเจ้าขอรับรองว่าข้อมูลที่ให้ไว้ข้างต้นเป็นจริง</label><br>
+                        <button type="submit" class="btn btn-success ">Register</button>
+                        <button type="button" class="btn btn-danger " onclick="closeForm()">ปิด</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openForm() { // open and close form
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', function () { // one of two pdf got
+            const inputs = Array.from(
+                document.querySelectorAll('input[name=myfile], input[name=pdf_link]')
+            );
+
+            const inputListener = e => {
+                inputs
+                    .filter(i => i !== e.target)
+                    .forEach(i => (i.required = !e.target.value.length));
+            };
+
+            inputs.forEach(i => i.addEventListener('input', inputListener));
+        });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
