@@ -18,7 +18,7 @@ This site was built using git hub pages [login DEMO](https://brokenhead.github.i
 v1
 
 <img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/2b960c29-1465-44b5-a8d3-e03f3214baeb" width="400">
-<img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/27dc98a5-eb1a-487e-a8c5-8fe9cea00853" width="400">
+<img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/27dc98a5-eb1a-487e-a8c5-8fe9cea00853" width="200">
 <img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/9f1d7d39-8720-4125-a7dd-34eda8485310" width="400">
 - user(Thammasat's Employee) can view own Seminar and Training program (verified by HR of Thammasat University)
 - user can record own Seminar and Training by themself but user mush verify seminar by themself![image]()
