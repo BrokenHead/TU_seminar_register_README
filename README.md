@@ -43,7 +43,7 @@ contact me Varist
 
 ## devloper guide line
 
-First, go to VM server that is hosting this program (http://203.131.211.59/)
+First, go to VM that is hosting this program (http://203.131.211.59/)
 
 - open Command Prompt and cd to folder : D:\web_node_js\TU_seminar_register
 ```
