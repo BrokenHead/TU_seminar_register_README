@@ -6,7 +6,7 @@ http://203.131.211.59/
 This site was built using git hub pages [login DEMO](https://brokenhead.github.io/TU_seminar_register_README/login_TU_SEMINAR_.html).
 
 ##  Why the project is useful
-### - seminar data PDF print out will summarize time and data of sorted seminar to use in pay rise, contract renewal or rise academic position in same form
+### seminar data PDF print out will summarize time and data of sorted seminar to use in pay rise, contract renewal or rise academic position in same form
 - user can register Seminar record by themself
 - make HR admin got less call phone for checking who's passing Seminar and Training
 - make facility admin can register Seminar by themself not have to pass Seminar data to HR admin
@@ -20,6 +20,7 @@ v1
 <img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/2b960c29-1465-44b5-a8d3-e03f3214baeb" width="400">
 <img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/27dc98a5-eb1a-487e-a8c5-8fe9cea00853" width="200">
 <img src="https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/9f1d7d39-8720-4125-a7dd-34eda8485310" width="400">
+
 - user(Thammasat's Employee) can view own Seminar and Training program (verified by HR of Thammasat University)
 - user can record own Seminar and Training by themself but user mush verify seminar by themself
 - can print sorted seminar to summary's PDF file
