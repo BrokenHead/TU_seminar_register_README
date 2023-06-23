@@ -25,7 +25,12 @@ v1
 - user can record own Seminar and Training by themself but user mush verify seminar by themself
 - can print sorted seminar to summary's PDF file
 
+  
+
 v2
+
+![image](https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/695486c4-f7d6-4aea-a788-b152d27751a9)
+
 - admin management in application
 - can register admin by open ticket or adding manually
 - auto genarate letter of consent for organization director/dean to accept organization admin
