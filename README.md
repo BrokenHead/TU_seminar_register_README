@@ -65,7 +65,7 @@ First, go to VM server that is hosting this program (http://203.131.211.59/)
 WE MUST USE 
 - oracledb version 5.5.0 (less than version 6.0.0)
 
-##this program is testing and running on stack
+## this program is testing and running on stack
 ### Front-End
 - ejs version : 3.1.8
 ### Back-end
