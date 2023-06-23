@@ -62,8 +62,8 @@ First, go to VM server that is hosting this program (http://203.131.211.59/)
 ## Installation notation
 
 !!!!!! because database now we use oracle 10g for prevend error
-WE MUSt USE 
-- oracledb 5.5.0 (less than version 6.0.0)
+WE MUST USE 
+- oracledb version 5.5.0 (less than version 6.0.0)
 
 this program is testing and running on
 - node js -v : v18.16.0
