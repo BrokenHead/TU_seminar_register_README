@@ -65,10 +65,17 @@ First, go to VM server that is hosting this program (http://203.131.211.59/)
 WE MUST USE 
 - oracledb version 5.5.0 (less than version 6.0.0)
 
-this program is testing and running on
-- node js -v : v18.16.0
-- npm -v : 9.5.1
+##this program is testing and running on stack
+### Front-End
 - ejs version : 3.1.8
-- Windows Server 2022 Standard version : 21H2
+### Back-end
+- express : 4.18.1
+- node js -v : v18.16.0
+### Database
 - oracle 10g
+
+other
+- npm -v : 9.5.1
+- Windows Server 2022 Standard version : 21H2
+
 
