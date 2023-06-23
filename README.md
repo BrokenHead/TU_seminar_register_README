@@ -35,6 +35,7 @@ v2
 - can register admin by open ticket or adding manually
 - auto genarate letter of consent for organization director/dean to accept organization admin
  <br />
+ 
 - admin can view relevant user's Seminar
 - admin can print relevant user's seminar (PDF file)
 - admin can record seminar to relevant user
