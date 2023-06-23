@@ -3,7 +3,7 @@
 http://203.131.211.59/
 This site was built using git hub pages [login DEMO](https://brokenhead.github.io/TU_seminar_register_README/login_TU_SEMINAR_.html).
 
-What the project does
+## What the project does
 (planned stable version of TU Web Seminar Register)
 
 v1
@@ -22,26 +22,26 @@ v2
 - admin can edit record who's under relevant
 
 
-Why the project is useful
+###  Why the project is useful
 - make HR admin got less call phone for checking who's passing Seminar and Training
 - make facility admin can register Seminar by themself not have to pass Seminar data to HR admin
 - user can register Seminar record by themself and all Seminar and register printout same form 
 
 
-How users can get started with the project
+### How users can get started with the project
 - go to .....//Seminar_register or use it from HR TU web
 
-Where users can get help with your project
+### Where users can get help with your project
 contact me Varist
 - call 2564 4440 to 1898 (home telephone Thailand)
 - +66 62-535-9519 
 - Varist.siri@gmail.com
 
-Who maintains and contributes to the project
+### Who maintains and contributes to the project
 - make and maintains by Varist Siriumpunkul Thammasat University's Computer Technical Officer.
 
 
-devloper guide line
+## devloper guide line
 
 First, go to VM server that is hosting this program (http://203.131.211.59/)
 
@@ -59,7 +59,7 @@ First, go to VM server that is hosting this program (http://203.131.211.59/)
 ```
 
 
-Installation notation
+## Installation notation
 
 !!!!!! because database now we use oracle 10g for prevend error
 WE MUSt USE 
