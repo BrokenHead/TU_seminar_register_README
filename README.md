@@ -1,37 +1,37 @@
 # TU Seminar register (Web App)
+serve view, register and printing PDF of personal seminar data with admin system and admin management include auto genarate letter of consent document
+
 
 http://203.131.211.59/
 This site was built using git hub pages [login DEMO](https://brokenhead.github.io/TU_seminar_register_README/login_TU_SEMINAR_.html).
+
+##  Why the project is useful
+### - seminar data PDF print out will summarize time and data of sorted seminar to use in pay rise, contract renewal or rise academic position in same form
+- user can register Seminar record by themself
+- make HR admin got less call phone for checking who's passing Seminar and Training
+- make facility admin can register Seminar by themself not have to pass Seminar data to HR admin
+
 
 ## What the project does
 (planned stable version of TU Web Seminar Register)
 
 v1
-- user(Thammasat's Employee) can view own Seminar and Training program
+- user(Thammasat's Employee) can view own Seminar and Training program (verified by HR of Thammasat University)
 - user can record own Seminar and Training by themself but it not verify
-- can print sorted seminar to summary PDF file
+- can print sorted seminar to summary's PDF file
 
 v2
 - admin management in application
 - can register admin by open ticket or adding manually
 - auto genarate letter of consent for organization director/dean to accept organization admin
   
-- admin can view relevant user Seminar
+- admin can view relevant user's Seminar
 - admin can print relevant user's seminar (PDF file)
 - admin can record seminar to relevant user
 - admin can edit record who's under relevant
 
 
-###  Why the project is useful
-- make HR admin got less call phone for checking who's passing Seminar and Training
-- make facility admin can register Seminar by themself not have to pass Seminar data to HR admin
-- user can register Seminar record by themself and all Seminar and register printout same form 
-
-
-### How users can get started with the project
-- go to .....//Seminar_register or use it from HR TU web
-
-### Where users can get help with your project
+### Where system admin can get help with this project
 contact me Varist
 - call 2564 4440 to 1898 (home telephone Thailand)
 - +66 62-535-9519 
