@@ -1,7 +1,7 @@
 # TU Seminar register (Web App)
 
 http://203.131.211.59/
-This site was built using git hub pages [login DEMO](https://brokenhead.github.io/test_web_github/login_TU_SEMINAR_.html).
+This site was built using git hub pages [login DEMO](https://brokenhead.github.io/TU_seminar_register_README/login_TU_SEMINAR_.html).
 
 What the project does
 (planned stable version of TU Web Seminar Register)
