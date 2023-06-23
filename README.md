@@ -40,9 +40,35 @@ contact me Varist
 Who maintains and contributes to the project
 - make and maintains by Varist Siriumpunkul Thammasat University's Computer Technical Officer.
 
-Installation guide
+
+devloper guide line
+
+First, go to VM server that is hosting this program (http://203.131.211.59/)
+
+- open Command Prompt and cd to folder : D:\web_node_js\TU_seminar_register
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+  cd D:\web_node_js\TU_seminar_register
 ```
+
+- open VS code and run nodemon for open server (by the way if this program is running normally that mean this web server is run as startup run time service)
+```
+  code .
+```
+```
+  npm run dev
+```
+
+
+Installation notation
+
+!!!!!! because database now we use oracle 10g for prevend error
+WE MUSt USE 
+- oracledb 5.5.0 (less than version 6.0.0)
+
+this program is testing and running on
+- node js -v : v18.16.0
+- npm -v : 9.5.1
+- ejs version : 3.1.8
+- Windows Server 2022 Standard version : 21H2
+- oracle 10g
+
