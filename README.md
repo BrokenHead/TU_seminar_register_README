@@ -16,9 +16,9 @@ This site was built using git hub pages [login DEMO](https://brokenhead.github.i
 (planned stable version of TU Web Seminar Register)
 
 v1
-- user(Thammasat's Employee) can view own Seminar and Training program (verified by HR of Thammasat University)
-- user can record own Seminar and Training by themself but it not verify
-- can print sorted seminar to summary's PDF file
+- user(Thammasat's Employee) can view own Seminar and Training program (verified by HR of Thammasat University)![image](https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/ec3e3c6f-57d2-4a77-a12c-e65e0a5a501b)
+- user can record own Seminar and Training by themself but user mush verify seminar by themself![image](https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/27dc98a5-eb1a-487e-a8c5-8fe9cea00853)
+- can print sorted seminar to summary's PDF file![image](https://github.com/BrokenHead/TU_seminar_register_README/assets/37082529/9f1d7d39-8720-4125-a7dd-34eda8485310)
 
 v2
 - admin management in application
