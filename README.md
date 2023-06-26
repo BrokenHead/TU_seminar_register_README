@@ -1,5 +1,5 @@
 # TU Seminar register (Web App)
-serve view, register and printing PDF of personal seminar data with admin system and admin management include auto genarate letter of consent document
+serve view, register and printing PDF of personal seminar data with admin system and admin management include auto genarate letter of consent document for accept admin 
 
 
 http://203.131.211.59/
