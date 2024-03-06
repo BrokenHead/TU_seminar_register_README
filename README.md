@@ -71,9 +71,9 @@ First, go to VM that is hosting this program (http://203.131.211.59/)
 
 ## this program is testing and running on stack
 ### Front-End
-- ejs : 3.1.8
+- ejs : 3
 ### Back-end
-- express : 4.18.1
+- express : 4
 - node js : v18
 - oracledb
 ### Database
