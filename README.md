@@ -69,24 +69,17 @@ First, go to VM that is hosting this program (http://203.131.211.59/)
   npm run dev
 ```
 
-
-## Installation notation
-
-!!!!!! because database now we use oracle 10g for prevend error
-WE MUST USE 
-- oracledb version 5.5.0 (less than version 6.0.0)
-
 ## this program is testing and running on stack
 ### Front-End
-- ejs version : 3.1.8
+- ejs : 3.1.8
 ### Back-end
 - express : 4.18.1
-- node js -v : v18.16.0
+- node js : v18
+- oracledb
 ### Database
-- oracle 10g
+- oracle 
 
 other
-- npm -v : 9.5.1
-- Windows Server 2022 Standard version : 21H2
+- Windows Server 2022
 
 
